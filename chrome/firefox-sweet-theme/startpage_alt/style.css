@@ -12,7 +12,7 @@ body{
     grid-template-columns: repeat(3,1fr);
     justify-items: center;
 }
-.weather-container {
+.weather- container {
     position: absolute;
     top: 1rem;
     right: 1rem;
