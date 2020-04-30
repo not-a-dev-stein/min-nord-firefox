@@ -1,60 +1,175 @@
-body{
-	background: #2e3440;
-	color: #BBC4C8;
+html, body {
+    min-height: 100%;
 }
-.container{
-	display: grid;
-	grid-gap: 20px;
-	margin-top: 5%;
-	margin-bottom: 2%;
-	margin-left: 15%;
-	margin-right: 15%;
-	grid-template-columns: repeat(4,1fr);
-	justify-items: center;
+
+body {
+    background: no-repeat fixed center;
+    background-size: cover;
+    height: 100%;
+    margin: 0px;
+    background-color: rgba(46, 52, 64);
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1.hello {
+	margin-top: 10px;
+}
+
+h1.hello, h1.timing {
+	margin-bottom: 10px;
+	font-size: 3.2rem;
+	color: #9BA8BB
+}
+#search {
+    width: 63.5%;
+    height: 12vh;
+    /*background-color: rgba(59, 66, 82, 1);*/
+    background: center;
+    display: none;
+    position: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-field {
+    width: 80%;
+    padding: .7em .7em;
+    box-sizing: border-box;
+    background-color: rgba(59, 66, 82, 0.9);
+    border: solid 0px #272727;
+    font-family: "Product Sans", sans-serif;
+    font-size: 1.3rem;
+    color: #9BA8BB;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: .5em;
+    text-align: left;
+}
+
+.weather-container {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    font-family: "Product Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #9BA8BB;
+    text-align: center;
+    text-shadow: 0 1px 5px rgba(0,0,0,.1);
+    background-color: rgba(59, 66, 82, 1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.6rem;
+    border-radius: 10px;
+    z-index: 1;
+}
+.inline {
+    display: inline-block;
 }
 .logo{
 	grid-column: 1/-1;
-	padding-bottom: 50px;
-	padding-top: 50px;
+	padding-bottom: 10px;
+	padding-top: 10px;
 }
-.search_box{
-	grid-column: 1/-1;
-	padding-bottom: 25px;
-	margin-left: 0px;
+.search-container-mobile {
+    position: absolute;
+    width: 2.5rem;
+    top: 1rem;
+    left: 1rem;
+    font-family: "Product Sans", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #9BA8BB;
+    text-align: center;
+    justify-content: center;
+    text-shadow: 0 1px 5px rgba(0,0,0,.1);
+    background-color: rgba(39, 39, 39, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.8rem;
+    border-radius: 10px;
+    z-index: 1;
 }
-.input_box{
-	border: none;
-	outline: none;
-	background: #4c566a;
-	padding: 15px;
-	color: whitesmoke;
-	font-size: 20px;
-	transition: 0.4px all;
-	border-radius: 5px 5px 5px 5px;
-	width: 600px;
-	margin-bottom: 30px;
-	/*box-shadow: 3px 4px #0F1011;*/
+#search-mobile {
+    display: none;
+}
+#hide-mobile {
+    display: none;
+    z-index: 900;
+}
 
+/* Smartphone Portrait and Landscape */ 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px){ 
+  #search-mobile {display: flex;}
 }
-li{
-	list-style-type: none;
-	padding:5px
+
+.bookmark-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 60%;
+    margin: 1em 0em;
 }
-a:link{
-	text-decoration: none;
-	color: #9BA8BB;
+
+@media only screen and (max-width: 960px) {
+    .container {
+        height: auto;
+    }
+    #clock {
+        margin-top: 1em;
+    }
+    .container > .bookmark-container {
+        flex-direction: column;
+        width: 60%;
+    }
+    .bookmark-container > .bookmark-set {
+        width: auto;
+        margin: 1em 0em;
+    }
 }
-a:visited{
-	color: #9BA8BB;
+
+.bookmark-set{
+    padding: 1em;
+    background-color: rgba(59, 66, 82, 0.7);
+    border-radius: 6px;
+    font-family: "Product Sans", sans-serif;
+    backdrop-filter: blur(10px);
+    font-size: 0.9rem;
+    width: 25%;
+    height: 11em;
+    margin: 0em .5em;
 }
-a:hover{
-	color: #0091eb;
+.bookmark-inner-container {
+    height: 80%;
+    vertical-align: top;
 }
-.category{
-	background: #3b4252;
-	padding: 20px;
-	border: #191C1E;
-	border-radius: 5px;
-	width:   -moz-available;
-	/*box-shadow: 3px 5px #0F1011;*/
+.bookmark-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #6d92de;
+    margin: 0em 0em .6em 0em;
+}
+.bookmark {
+    text-decoration: none;
+    color: #9BA8BB;
+    display:block;
+    margin: .5em 0em;
+}
+.bookmark:hover {
+    color: #9BA8BB;
 }

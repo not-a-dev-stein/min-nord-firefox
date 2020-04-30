@@ -1,42 +1,259 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title> ~ </title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body>
-		<div class="container">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Página Inicial</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700" rel="stylesheet">
+</head>
+
+<body>
+    <div class="weather-container" id="weather">
+        <div class="row">
+            <a href="https://www.bbc.com/weather/0/3461408" style="text-decoration: none; color: #fff">
+                <i id="weather-icon" class="inline wi"></i>
+                <div id="temp" class="inline"></div>
+            </a>
+        </div>
+    </div>
+    <div class="container">
 	<div class="logo"><img src="icons/firefox-dev.svg"/></div>
-			<div class="search_box">
-				<form action="https://www.qwant.com/" method="get">
-				<!-- <form action="https://www.google.com/search" method="get"> -->
-					<input class="input_box" type="text" name="q" placeholder="Search with Qwant"/>
-				
-			</div>
-			<div class="category">
-				<li><a class="bm" href="https://beta.protonmail.com/inbox">ProtonMail</a></li>
-				<li><a class="bm" href="https://www.reddit.com/">Reddit</a></li>
-				<li><a class="bm" href="https://www.facebook.com/">Facebook</a></li>
-				<li><a class="bm" href="https://youtube.com/feed/subscriptions">YouTube</a></li>
-				<li><a class="bm" href="https://www.twitch.tv/directory/following">Twitch</a></li>
-			</div>
-			<div class="category">
-				<li><a class="bm" href="https://myanimelist.net/profile/--d41">MyAnimeList</a></li>
-				<li><a class="bm" href="https://bt.mdan.org/index.php">MDAN Fansub</a></li>
-				<li><a class="bm" href="https://tracker.uniotaku.com/index.php">UniOtaku</a></li>
-				<li><a class="bm" href="https://anidex.info/?page=search&id=1&lang_id=1,16&group_id=0&q=">AniDex</a></li>
-			</div>
-			<div class="category">
-				<li><a class="bm" href="https://uphold.com/">Uphold</a></li>
-				<li><a class="bm" href="https://app.liquid.com/vision">Liquid</a></li>
-				<li><a class="bm" href="https://publishers.basicattentiontoken.org/publishers/home?locale=en">Brave Creators</a></li>
-				<li><a class="bm" href="https://www.publish0x.com/">Publish0x</a></li>
-			</div>
-			<div class="category">
-				<li><a class="bm" href="https://www.google.com/finance">Ações</a></li>
-				<li><a class="bm" href="https://portalinvestidor.tesourodireto.com.br/">Tesouro Direto</a></li>
-				<li><a class="bm" href="http://dividendobr.com/">Dividendos</a></li>
-			</div>
-		</div>
-	</body>
+	<h1 class="hello">Bem-vindo!</h1>
+<div id="search">
+        <input id="search-field" type="text" value="" placeholder="Pesquise com Qwant" name="search-field"
+            onkeypress="return search(event)" />
+    </div>
+    <div class="search-container-mobile" id="search-mobile">
+        <div class="row">
+            <a href="#" style="text-decoration: none; color: #fff" onclick="showSearch();return false;">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </div>
+    <div class="search-container-mobile" id="hide-mobile">
+        <div class="row">
+            <a href="#" style="text-decoration: none; color: #fff" onclick="hideSearch();return false;">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+    </div>
+        <div class="bookmark-container">
+            <div class="bookmark-set">
+                <div class="bookmark-title"> Cotidiano</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://www.reddit.com/">Reddit</a>
+                    <a class="bookmark" href="https://www.facebook.com/">Facebook</a>
+		    <a class="bookmark" href="https://myanimelist.net/profile/--d41">MyAnimeList</a>
+		    <a class="bookmark" href="https://beta.protonmail.com/inbox">ProtonMail</a>
+                    <a class="bookmark" href="https://trello.com/b/LLu4FZby/freelances">Trello</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+                <div class="bookmark-title"></i> Finanças</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://app.liquid.com/vision">Liquid</a>
+		    <a class="bookmark" href="https://uphold.com/dashboard">Uphold</a>
+		    <a class="bookmark" href="http://dividendobr.com/">Dividendos</a>
+		    <a class="bookmark" href="https://portalinvestidor.tesourodireto.com.br/">Tesouro Direto</a>
+		    <a class="bookmark" href="https://publishers.basicattentiontoken.org/publishers/home?locale=en">Brave Creators</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+                <div class="bookmark-title"></i> Mídia</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://www.twitch.tv/directory/following/live">Twitch</a>
+		    <a class="bookmark" href="https://www.youtube.com/feed/subscriptions">YouTube</a>
+		    <a class="bookmark" href="https://anidex.info/?page=search&id=1&lang_id=1,16&group_id=0&q=">AniDex</a>
+		    <a class="bookmark" href="https://tracker.uniotaku.com/index.php">UniOtaku</a>
+		    <a class="bookmark" href="https://bt.mdan.org/index.php">MDAN Fansub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get current time and format
+        function getTime() {
+            let date = new Date(),
+                min = date.getMinutes(),
+                //sec = date.getSeconds(),
+                hour = date.getHours();
+            return "" +
+                (hour < 10 ? ("0" + hour) : hour) + ":" +
+                (min < 10 ? ("0" + min) : min);// + ":" + 
+            //(sec < 10 ? ("0" + sec) : sec);
+        }
+        function getDate() {
+            let date = new Date(),
+                months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                cmonth = months[date.getMonth()],
+                days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                cday = days[date.getDay()],
+                cnum = date.getDate();
+            return "" + cday + " " + cnum + " " + cmonth;
+        }
+        window.onload = () => {
+            let xhr = new XMLHttpRequest();
+            // Request to open weather map
+            xhr.open('GET', 'https://api.openweathermap.org/data/2.5/weather?id=3461408&&units=metric&appid=248b843c2342d02a935744e20e0d56bd');
+            xhr.onload = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var prefix = "wi-";
+                        var today = new Date();
+                        var hour = today.getHours();
+                        var dn = "";
+                        if (hour > 5 && hour < 19) {
+                            dn = "";
+                        } else {
+                            dn = "night-";
+                        }
+                        let json = JSON.parse(xhr.responseText);
+                        console.log(json);
+                        var code = json.weather[0].id;
+                        wIcon = prefix + "owm-" + dn + code;
+                        console.log(wIcon);
+                        document.getElementById("temp").innerHTML = json.main.temp.toFixed(0) + "°";
+                        document.getElementById("weather-icon").classList.add(wIcon);
+                    } else {
+                        console.log('error msg: ' + xhr.status);
+                    }
+                }
+            }
+            xhr.send();
+            // Set up the clock and date
+            document.getElementById("clock").innerHTML = getTime();
+            document.getElementById("date").innerHTML = getDate();
+            // Set clock interval to tick clock
+            setInterval(() => {
+                document.getElementById("clock").innerHTML = getTime();
+            }, 100);
+            setInterval(() => {
+                document.getElementById("date").innerHTML = getDate();
+            }, 100000);
+
+            /* Unsplash photo get
+            //Global Width and Height Variables
+            var w = Math.ceil(window.screen.width * window.devicePixelRatio * 0.896);
+            var h = Math.ceil(window.screen.height * window.devicePixelRatio * 0.896);
+            //w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            //h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+            document.body.style.backgroundImage = 'url("https://source.unsplash.com/' + w + 'x' + h + '/?wallpapers")';
+            console.log('https://source.unsplash.com/' + w + 'x' + h + '/?wallpapers');
+            */
+            document.body.style.backgroundImage = 'url(./backgrounds/' + (Math.floor(Math.random() * 23)+1) + '.jpg)';
+        }
+
+        /*function onResize() {
+            var newW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+            var newH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+            if (newW>w || newH>h) {
+                w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+                h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+                document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
+            }
+        }
+        
+        window.addEventListener('resize', onResize);*/
+
+        // Search on enter key event
+        function search(e) {
+            if (e.keyCode == 13) {
+                var val = document.getElementById("search-field").value;
+                document.getElementById('search-field').value = '';
+                switch (val) {
+                    case "steam":
+                    case " steam":
+                        window.location.href = "steam:";
+                        break;
+                    case "photos":
+                    case " photos":
+                    case "photo":
+                    case " photo":
+                        window.location.href = "https://photos.google.com/";
+                        break;
+                    case "wikipedia":
+                    case " wikipedia":
+                    case "wiki":
+                    case " wiki":
+                        window.location.href = "https://en.wikipedia.org/";
+                        break;
+                    default:
+                        if (val[0] == " ") {
+                            window.location.href = "https://qwant.com/?q=" + val.substring(1);
+                        } else {
+                            window.location.href = "https://qwant.com/?q=" + val;
+                        }
+                }
+            }
+        }
+        var sfield = document.getElementById("search-field");
+        var sback = document.getElementById("search");
+        sfield.oninput = function () {
+            /*sback.style.backgroundColor = '#272727';*/
+            var val = sfield.value;
+            console.log(val);
+            switch (val) {
+                case "steam":
+                case " steam":
+                    document.body.style.backgroundImage = 'url(https://images5.alphacoders.com/695/695356.jpg)';
+                    break;
+                case "photos":
+                case " photos":
+                case "photo":
+                case " photo":
+                    document.body.style.backgroundImage = 'url(https://www.technobezz.com/files/uploads/2014/06/wallpaper-on-the-Samsung-S5.jpg)';
+                    break;
+                case "wikipedia":
+                case " wikipedia":
+                case "wiki":
+                case " wiki":
+                    document.body.style.backgroundImage = 'url(http://www.glaad.org/sites/default/files/images/2014-08/wikipedia.jpg)';
+                    break;
+                default:
+                    //sback.style.backgroundColor = '#272727';
+                    //document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
+            }
+        };
+        document.addEventListener("keydown", event => {
+            if (event.keyCode == 32) {          // Spacebar code to open search
+                document.getElementById('search').style.display = 'flex';
+                document.getElementById('search-field').focus();
+            } else if (event.keyCode == 27) {   // Esc to close search
+                document.getElementById('search-field').value = '';
+                document.getElementById('search-field').blur();
+                document.getElementById('search').style.display = 'none';
+                document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
+            }
+        });
+
+        function showSearch() {
+            document.getElementById('search-mobile').style.display = 'none';
+            document.getElementById('hide-mobile').style.display = 'flex';
+
+            document.getElementById('search').style.display = 'flex';
+            document.getElementById('search-field').focus();
+        }
+
+        function hideSearch() {
+            document.getElementById('search-field').value = '';
+            document.getElementById('search-field').blur();
+            document.getElementById('search').style.display = 'none';
+            document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
+
+            document.getElementById('search-mobile').style.display = 'flex';
+            document.getElementById('hide-mobile').style.display = 'none';
+        }
+    </script>
+</body>
+
 </html>
