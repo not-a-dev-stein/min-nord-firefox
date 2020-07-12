@@ -172,19 +172,14 @@
                 document.getElementById('search-field').value = '';
                 switch (val) {
                     case "steam":
-                    case " steam":
                         window.location.href = "steam:";
                         break;
                     case "photos":
-                    case " photos":
                     case "photo":
-                    case " photo":
                         window.location.href = "https://photos.google.com/";
                         break;
                     case "wikipedia":
-                    case " wikipedia":
                     case "wiki":
-                    case " wiki":
                         window.location.href = "https://en.wikipedia.org/";
                         break;
                     default:
@@ -204,19 +199,14 @@
             console.log(val);
             switch (val) {
                 case "steam":
-                case " steam":
                     document.body.style.backgroundImage = 'url(https://images5.alphacoders.com/695/695356.jpg)';
                     break;
                 case "photos":
-                case " photos":
                 case "photo":
-                case " photo":
                     document.body.style.backgroundImage = 'url(https://www.technobezz.com/files/uploads/2014/06/wallpaper-on-the-Samsung-S5.jpg)';
                     break;
                 case "wikipedia":
-                case " wikipedia":
                 case "wiki":
-                case " wiki":
                     document.body.style.backgroundImage = 'url(http://www.glaad.org/sites/default/files/images/2014-08/wikipedia.jpg)';
                     break;
                 default:
@@ -224,15 +214,20 @@
                     //document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
             }
         };
+        var verify = "yes"
         document.addEventListener("keydown", event => {
             if (event.keyCode == 32) {          // Spacebar code to open search
                 document.getElementById('search').style.display = 'flex';
                 document.getElementById('search-field').focus();
+                if (verify == "yes"){
+                    setTimeout(() => { document.getElementById('search-field').value = ''; verify = "no" }, 5);
+                }
             } else if (event.keyCode == 27) {   // Esc to close search
                 document.getElementById('search-field').value = '';
                 document.getElementById('search-field').blur();
                 document.getElementById('search').style.display = 'none';
-                document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
+                //document.body.style.backgroundImage = 'url("https://source.unsplash.com/random/' + w + 'x' + h + '/")';
+                verify = "yes"
             }
         });
 
