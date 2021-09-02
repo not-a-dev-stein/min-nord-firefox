@@ -22,7 +22,8 @@ From here on the rest is taken directly from EliverLara's and AnubisZ9's pages, 
 
 ### Installation script
 
-```sh
+```
+sh
 
 git clone https://github.com/not-a-dev-stein/min-nord-firefox && cd firefox-sweet-theme
 
@@ -76,13 +77,14 @@ git clone https://github.com/not-a-dev-stein/min-nord-firefox && cd firefox-swee
 
 
 
-        ```sh
+        
+        sh
 
         mkdir -p chrome
 
         cd chrome
 
-        ```
+        
 
 
 
@@ -90,22 +92,24 @@ git clone https://github.com/not-a-dev-stein/min-nord-firefox && cd firefox-swee
 
 
 
-        ```sh
+        
+        sh
 
         git clone https://github.com/EliverLara/firefox-sweet-theme.git
 
-        ```
+        
 
 
 
 6. Create single-line user CSS files if non-existent or empty (at least one line is needed for `sed`):
 
 
-        ```sh
+        
+        sh
 
         [[ -s userChrome.css ]] || echo >> userChrome.css
 
-        ```
+        
 
 
 
@@ -113,11 +117,12 @@ git clone https://github.com/not-a-dev-stein/min-nord-firefox && cd firefox-swee
 
 
 
-        ```sh
+        
+        sh
 
         sed -i '1s/^/@import "firefox-sweet-theme\/userChrome.css";\n/' userChrome.css
 
-        ```
+        
 
 
 
@@ -125,11 +130,12 @@ git clone https://github.com/not-a-dev-stein/min-nord-firefox && cd firefox-swee
 
 
 
-        ```sh
+        
+        sh
 
         ln -s chrome/firefox-sweet-theme/configuration/user.js ../user.js
 
-        ```
+        
 
 
 
@@ -155,7 +161,8 @@ Alternatively you can run installation script with `-g` flag to auto install GNO
 
 
 
-```sh
+```
+sh
 
 ./scripts/install.sh -g
 
