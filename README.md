@@ -23,8 +23,10 @@ From here on the rest is taken directly from EliverLara's and AnubisZ9's pages, 
 ### Installation script
 
 ```sh
-git clone https://github.com/not-a-dev-stein/min-nord-firefox && cd firefox-sweet-theme
+git clone https://github.com/not-a-dev-stein/min-nord-firefox && cd min-nord-firefox/chrome/firefox-sweet-theme
+chmod +x ./scripts/install.sh
 ./scripts/install.sh
+
 ```
 
 #### Script options
