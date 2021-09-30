@@ -6,7 +6,7 @@
 A minimalist startpage for Firefox with the Nord color pallette.
 
 Okay, first things first, this is the first time I do anything other than cloning and dowloading stuff on GitHub, and I have literally zero experience with programming and coding, so please have that in mind.
-I really wanted to have my Firefox matching the rest of the GNOME shell I use [EliverLara/Nordic](https://github.com/EliverLara/Nordic), but I didn't really find anything that fit the style I was looking for, so I tried messing up with [EliverLara's Firefox Sweet theme](https://github.com/EliverLara/firefox-sweet-theme) to the best of my abilities, in order to create it. 
+I really wanted to have my Firefox matching the rest of the GNOME shell I use ([EliverLara/Nordic](https://github.com/EliverLara/Nordic)), but I didn't really find anything that fit the style I was looking for, so I tried messing up with [EliverLara's Firefox Sweet theme](https://github.com/EliverLara/firefox-sweet-theme) to the best of my abilities, in order to create it. 
 
 About the startpage, I based mine entirely on [AnubisZ9's PixelFox](https://github.com/AnubisZ9/PixelFox), but  also with the Nord color scheme, and I did remove the search bar button and the categories' icons for a more simple look and switched the Firefox logo for alternative Developer Version from [vinceliuice's VimixBlack GNOME icon pack](https://github.com/vinceliuice/vimix-icon-theme), which I think suited the theme better then the stock Firefox logo.
 
